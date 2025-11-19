@@ -29,13 +29,17 @@ public class Ejemplo07 {
         boolean bandera = true;
 
         int contador = 0;
+        /* existe un contador no para limitar la solucion 
+        pues eso queda en manos del usuario, sino para poder promediar 
+        la calificacion llevando el registro de veces que se introdujeron datos 
+        */
 
         System.out.println("Ingrese las notas de los estudiantes de su materia");
-        while (bandera) {
+        while (bandera) { // es lo mismo decir while (bandera==true)
             System.out.println("Ingrese calificación");
-            calificacion = entrada.nextDouble();
-            suma_total = suma_total + calificacion;
-            contador = contador + 1;
+            calificacion = entrada.nextDouble(); //10
+            suma_total = suma_total + calificacion; // 0 + 10 = 10
+            contador = contador + 1; // 0 + 1 = 1
             // proceso para salir del ciclo.
             System.out.println("Ingrese el valor de -1 para salir del ciclo");
             int temporal = entrada.nextInt();

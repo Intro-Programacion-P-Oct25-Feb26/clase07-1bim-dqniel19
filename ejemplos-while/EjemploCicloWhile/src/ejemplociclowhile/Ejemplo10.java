@@ -29,7 +29,7 @@ public class Ejemplo10 {
         tabla = entrada.nextInt();
         
         String cadena = ""; // cadena acumulador
-        cadena = String.format("%sTabla de multiplicar\n", cadena);
+        cadena = String.format("Tabla de multiplicar\n");
         
         while (contador <= 12){
             operacion = tabla * contador;
