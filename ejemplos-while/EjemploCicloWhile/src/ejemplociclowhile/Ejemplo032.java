@@ -4,13 +4,16 @@
  * and open the template in the editor.
  */
 package ejemplociclowhile;
+
 import java.util.Locale;
 import java.util.Scanner;
+
 /**
  *
  * @author reroes
  */
-public class Ejemplo02 {
+public class Ejemplo032 {
+
     /**
      * @param args the command line arguments
      */
@@ -18,25 +21,24 @@ public class Ejemplo02 {
         // TODO code application logic here
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
-        int limite;
+        int limite = 5;
         int contador = 1;
-        System.out.println("Ingrese el Límite");
-        limite = entrada.nextInt(); 
-        while (contador <= limite){
-            
-            if (contador%2!=0) {
-                System.out.printf("Contador %d\n", 
-                    contador);
-            }
-            
+        int suma = 0;
+        int valor_ingresado;
+        
+        while (contador <= limite) { 
+            System.out.println("Ingrese el valor a sumar");
+            valor_ingresado = entrada.nextInt();
+            if (valor_ingresado>=20 && valor_ingresado<=35){
+            suma = suma + valor_ingresado;
+            } else {
+            suma = suma + 50;}
+            System.out.printf("Valor ingresado %d\n", 
+                    valor_ingresado);
             contador = contador + 1;
         }
-        
+
+        System.out.printf("La suma final es %d\n", suma);
+
     }
 }
-/*
-La solución pide ingresar un valor límite, al hacerlo, se impromirá la frase 
-asignada junto al contador, unicamente utilizando numeros impares por el %2!
-hasta llegar un numero antes del limite establecido. Si el valor ingresado es 
-0 el proceso terminará
-*/
